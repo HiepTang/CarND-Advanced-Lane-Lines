@@ -728,3 +728,5 @@ I also try to process the challenge video. However, the result is not good with 
 
 ## Conclusion
 My solution can work well on the project video output but not good on the challenge video output. I think the root cause is my color and threshold solution is not good enough in order to get the correct lane lines edge and filter the noise from the light condition. I will improve it in the future.
+My first attemp to process the project video is not good with some frames with the bright condition and tree shadow. I try to modify the sanity test function in order to detect this failure and try to use the previous frame lane result if failure.
+I also take a look on the harder challenge video, I think my solution cannot work with this challenge because the current sliding windows only work with the lane has only curvature direction. In the future, I will try to improve the finding lane lines algorithrm to use the x points in order to detect how many curvatures on the lane. And based on it, I will try to find lane lines for each curvature based on the sliding windows algorithrm.
