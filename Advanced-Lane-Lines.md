@@ -10,6 +10,17 @@ The project has the following steps:
 * Video processing
 
 [Source File](Advanced-Lane-Lines.ipynb)
+
+Output:
+* [Project video output](project_video_outout.mp4)
+* [Challenge video output](challenge_video_outout.mp4)
+* [Camera calibration output](output_images/camera_cal)
+* [Distortion correction output](output_images/test_images/undistorted)
+* [Color and gradient threshold output](output_images/test_images/threshold)
+* [Perspective Transform output](output_images/test_images/warped)
+* [Finding lane lines output](output_images/test_images/lane)
+* [Final processing test images output](output_images/test_images/final)
+
 ## Step 1 Camera calibration
 The first step of the image processing pipeline is camera calibration in order to fix the image distortation problem from the effect of camera lens. The project provides 20 chessboard camera images to help us do the camera calibration. I use the cv2.findChessboardCorners() function in order to find all chessboard corners on these images. After that, I use the cv2.calibrateCamera() function to find the distortion array of the camera lens. Finally, I apply the cv2.undistort() function to get undistorted images.
 The output of this step is saved on [output_images/camera_cal folder](output_images/camera_cal)
